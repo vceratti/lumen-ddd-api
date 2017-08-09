@@ -1,0 +1,7 @@
+idea
+build/
+
+docker-php-build-up.sh
+php-build
+.idea/
+bash-scripts/
