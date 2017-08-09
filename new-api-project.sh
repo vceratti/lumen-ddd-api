@@ -2,7 +2,6 @@
 
 root="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-
 function usage {
     printf "
 Usage: new-project.sh <params>
@@ -15,16 +14,16 @@ Possible parameters:
     exit 1
 }
 
-libVersion="1.0.1"
+libVersion="1.0.2"
 
 function importLib {
     removeLib
-    echo "downloading files... "
+    printf  "\ndownloading files...\n"
     mkdir bash-scripts-$libVersion
     wget "https://github.com/vceratti/bash-scripts/archive/$libVersion.tar.gz" &> /dev/null
     tar -xf "$libVersion.tar.gz"
     rm "$libVersion.tar.gz"
-    echo ""
+
 }
 
 function removeLib {
@@ -62,7 +61,6 @@ function composer_update {
     fi
 
 }
-
 
 
 function clean {
