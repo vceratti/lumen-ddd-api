@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker exec -it cross_php-build_1 composer $@
