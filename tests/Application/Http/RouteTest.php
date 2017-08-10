@@ -1,7 +1,8 @@
 <?php
 
-use Laravel\Lumen\Testing\DatabaseMigrations;
-use Laravel\Lumen\Testing\DatabaseTransactions;
+namespace Tests\Http;
+
+use Tests\TestCase;
 
 class RouteTest extends TestCase
 {
@@ -19,7 +20,15 @@ class RouteTest extends TestCase
     /** User routes  */
     public function testUserRoutes()
     {
-        $this->get('/user/1');
-        $this->assertEquals($this->app->version(), $this->response->getContent());
+        $this->get('/users');
+        $this->assertEquals('default controller getAll', $this->response->getContent());
+        $this->get('/users/1');
+        $this->assertEquals('default controller getOne 1', $this->response->getContent());
+        $this->post('/users');
+        $this->assertEquals('default controller insert', $this->response->getContent());
+        $this->put('/users/2');
+        $this->assertEquals('default controller update 2', $this->response->getContent());
+        $this->delete('/users/3');
+        $this->assertEquals('default controller delete 3', $this->response->getContent());
     }
 }

@@ -8,27 +8,26 @@ class DefaultController extends BaseController
 {
     public function getAll()
     {
-        return '<br>default controller getall';
+        return 'default controller getAll';
     }
 
-    public function getOne()
+    public function getOne($id)
     {
-        return '<br>default controller getOne';
+        return "default controller getOne $id";
     }
 
     public function insert()
     {
-        return '<br>default controller insert';
+        return 'default controller insert';
     }
 
-    public function update()
+    public function update($id)
     {
-        return '<br>default controller update';
+        return "default controller update $id";
     }
 
-    public function delete()
+    public function delete($id)
     {
-        return '<br>default controller delete';
-
+        return "default controller delete $id";
     }
 }

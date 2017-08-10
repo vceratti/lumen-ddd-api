@@ -20,7 +20,6 @@ class DefaultRouter
         $this->setMethodRequiringId('getOne', 'get');
         $this->setMethodRequiringId('update', 'put');
         $this->setMethodRequiringId('delete', 'delete');
-
     }
 
     public function setMethod($function, $method)
