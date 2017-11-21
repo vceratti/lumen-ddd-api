@@ -1,9 +1,8 @@
-build/
+.mariadb
 .idea/
+build/
 vendor/
 project-sample/
-
-docker-php-build-up.sh
-php-build
+src/.env
 
 

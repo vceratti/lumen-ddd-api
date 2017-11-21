@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-
-docker exec -it cross_php-build_1 composer $@
+docker-compose up -d
+docker exec -it projetoteste_php_build composer $@
+docker exec -it projetoteste_php_build chown -R `stat -c "%u:%g" .` ./vendor
