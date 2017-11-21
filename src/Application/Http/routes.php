@@ -19,5 +19,6 @@ $router = new \Application\Http\Routes\DefaultRouter($app);
 
 $app->group(['namespace' => 'User'], function () use ($router) {
     $routes['users'] = ['User' => ['getAll', 'getOne', 'insert', 'update', 'delete']];
+
     $router->addRoutes($routes);
 });

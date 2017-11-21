@@ -60,6 +60,9 @@ function create_tools_scripts {
     echo "docker exec -it ${project_name}_php_build composer \$@" >> ./composer
     printf "docker exec -it ${project_name}_php_build chown -R " >> ./composer
     printf '`stat -c "%%u:%%g" .` ./vendor' >> ./composer
+    echo "" >> ./composer
+    printf "docker exec -it ${project_name}_php_build chown  " >> ./composer
+    printf '`stat -c "%%u:%%g" .` ./composer.lock' >> ./composer
 
     sudo chmod +x ./artisan ./composer
 
@@ -84,7 +87,7 @@ function clean {
 
     log_wait "Cleaning old files (./.mariadb /.build /vendor)"
 
-    sudo rm -rf build .mariadb vendor &> /dev/null
+    sudo rm -rf .build .mariadb vendor &> /dev/null
     sudo rm docker-php_build-up.sh docker-compose.yml ant-build composer.lock artisan composer &> /dev/null
 
     log_done

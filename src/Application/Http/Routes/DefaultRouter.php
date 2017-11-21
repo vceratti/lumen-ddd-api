@@ -39,12 +39,17 @@ class DefaultRouter
     public function addRoutes($routes)
     {
         foreach ($routes as $url => $controller) {
-            foreach ($controller as $class => $action) {
-                foreach ($action as $method) {
-                    $restUrl = $this->makeUrl($method, $url);
-                    $apiMethod = $this->mapMethod($method);
-                    $this->app->$apiMethod($restUrl, "{$class}Controller@$method");
-                }
+            $this->addController($controller, $url);
+        }
+    }
+
+    public function addController(array $controller, $url)
+    {
+        foreach ($controller as $class => $action) {
+            foreach ($action as $method) {
+                $restUrl = $this->makeUrl($method, $url);
+                $apiMethod = $this->mapMethod($method);
+                $this->app->$apiMethod($restUrl, "{$class}Controller@$method");
             }
         }
     }
