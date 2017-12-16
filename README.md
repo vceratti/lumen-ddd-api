@@ -7,8 +7,8 @@ Clone this repository in your project folder and run the installer:
 
 ```bash
 git clone https://github.com/vceratti/lumen-ddd-api.git . &&
-chmod +x ./new-api-project.sh.sh &&
-./new-api-project.sh.sh
+chmod +x ./new-api-project.sh &&
+./new-api-project.sh
 ```
 
 This installer will (may as for root permissions):
