@@ -72,6 +72,7 @@ function main {
     sed -i -e "s/<project-name>/${project_name}/g" ./src/.env.example
     sed -i -e  "s/.build\///g" ./.gitignore
     rm ./new-api-project.sh ./README.md
+    rm -Rf .git
 
     removeLib
 }
