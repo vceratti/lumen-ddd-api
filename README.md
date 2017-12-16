@@ -5,9 +5,11 @@ A project for quick starting a REST API made with Lumen, using DDD and TDD (BDD?
 
 Clone this repository in your project folder and run the installer:
 
+```bash
 git clone https://github.com/vceratti/lumen-ddd-api.git . &&
 chmod +x ./new-api-project.sh.sh &&
 ./new-api-project.sh.sh
+```
 
 This installer will (may as for root permissions):
 
