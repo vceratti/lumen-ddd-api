@@ -11,6 +11,6 @@ abstract class TestCase extends \Laravel\Lumen\Testing\TestCase
      */
     public function createApplication()
     {
-        return require __DIR__.'/../src/Application/bootstrap.php';
+        return require __DIR__ . '/../src/bootstrap.php';
     }
 }

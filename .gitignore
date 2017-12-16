@@ -1,8 +1,4 @@
-.mariadb
-.idea/
-build/
+.mariadb/
+.build/
 vendor/
-project-sample/
-src/.env
-
-
+src/.enn
